@@ -68,25 +68,25 @@ public class Solution {
 		 * Enter your code here. Read input from STDIN. Print output to STDOUT.
 		 * Your class should be named Solution.
 		 */
-		Scanner scanner = new Scanner(System.in);
-		double count = scanner.nextInt();
 		Map<Predicate<Integer>, Counter> predicateMap = new HashMap<>();
 		predicateMap.put(i -> i > 0, new Counter(0));
 		predicateMap.put(i -> i == 0, new Counter(0));
 		predicateMap.put(i -> i < 0, new Counter(0));
 
-		while (scanner.hasNext()) {
-			int value = scanner.nextInt();
-			predicateMap.keySet().stream().forEach(pred -> {
-				if (pred.test(value)) {
-					predicateMap.get(pred).increment();
-				}
+		try (Scanner scanner = new Scanner(System.in)) {
+			double count = scanner.nextInt();
+			while (scanner.hasNext()) {
+				int value = scanner.nextInt();
+				predicateMap.keySet().stream().forEach(pred -> {
+					if (pred.test(value)) {
+						predicateMap.get(pred).increment();
+					}
+				});
+			}
+			predicateMap.keySet().stream().forEach(key -> {
+				System.out.println(divide(predicateMap.get(key).get(), count));
 			});
 		}
-		scanner.close();
-		predicateMap.keySet().stream().forEach(key -> {
-			System.out.println(divide(predicateMap.get(key).get(), count));
-		});
 	}
 
 	private static String divide(double divident, double divisor) {

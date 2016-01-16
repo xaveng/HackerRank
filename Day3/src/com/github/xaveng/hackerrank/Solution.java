@@ -1,3 +1,4 @@
+package com.github.xaveng.hackerrank;
 import java.io.*;
 import java.util.*;
 import java.text.*;

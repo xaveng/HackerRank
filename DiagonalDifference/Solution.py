@@ -4,7 +4,6 @@ Created on 2016. 1. 17.
 
 @author: SeoJeong
 '''
-import sys
 
 '''
 Given a square matrix of size N×N, calculate the absolute difference between the sums of its diagonals.

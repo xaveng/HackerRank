@@ -88,26 +88,22 @@ Below is the list in the correct order. The strings of each number were printed 
 '''
 if __name__ == '__main__':
     n = int(input())
-    numbers = [int(input().split(sep=' ')[0]) for i in range(n) ]
-    value = {}
-    for i in numbers:
-        if i in value:
-            value[i] = value[i] + 1
+    numbers = {}
+    for i in range(n):
+        inputed = input()
+        index, string = inputed.split(sep=' ')
+        index = int(index)
+        if i < n / 2:
+            string = '-'
             pass
-        else:
-            value[i] = 1
-            pass
+        if index not in numbers:
+            numbers[index] = []
+        numbers[index].append(string)
         pass
-    def read(i):
-        if i in value:
-            return value[i]
-        else:
-            return 0
+
     result = []
-    prev = 0
     for i in range(100):
-        count = read(i)
-        result.append(str(count + prev))
-        prev += count
+        if i in numbers.keys():
+            [result.append(value) for value in numbers[i]]
     print(' '.join(result))
-        
+         

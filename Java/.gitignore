@@ -1,0 +1,9 @@
+/.recommenders
+/.metadata
+/RemoteSystemsTempFiles
+/.bin
+/.obj
+/.Properties
+/*.iml
+/.idea
+*.class

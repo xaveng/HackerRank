@@ -1,10 +1,6 @@
 package com.github.xaveng.hackerrank;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+import java.util.Scanner;
 
 /**
  * Welcome to Day 2! Check out the video tutorial here, or just jump right into

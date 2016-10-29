@@ -1,11 +1,5 @@
 package com.github.xaveng.hackerrank;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
-
 /**
  * Welcome to Day 0 and the wonderful world of coding! Check out the video
  * tutorial here, or just jump right into the problem. The tutorial is based on

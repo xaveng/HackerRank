@@ -1,9 +1,6 @@
 package com.github.xaveng.hackerrank;
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+
+import java.util.Scanner;
 
 /**
  * Welcome to Day 3! Check out a review of if-else statements here, or just jump

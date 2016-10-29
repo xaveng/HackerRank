@@ -1,15 +1,11 @@
 package com.github.xaveng.hackerrank;
 
-import java.io.BufferedReader;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.List;
-
 import org.junit.Assert;
 import org.junit.Test;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SolutionTest {
 
@@ -30,7 +26,7 @@ public class SolutionTest {
 	@Test
 	public void test() {
 		StringBuffer actualBuffer = new StringBuffer();
-		testCases.stream().forEach(testCase -> {
+		testCases.forEach(testCase -> {
 			try (ByteArrayOutputStream out = new ByteArrayOutputStream(); PrintStream stream = new PrintStream(out)) {
 				System.setOut(stream);
 				Solution.test(testCase);
@@ -46,7 +42,7 @@ public class SolutionTest {
 		StringBuffer expectedBuffer = new StringBuffer();
 		try (BufferedReader br = new BufferedReader(
 				new InputStreamReader(this.getClass().getResourceAsStream("expected.txt")))) {
-			String expected = null;
+			String expected;
 			while ((expected = br.readLine()) != null) {
 				expectedBuffer.append(expected + "\n");
 			}

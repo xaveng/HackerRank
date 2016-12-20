@@ -1,6 +1,4 @@
 
-import itertools
-
 
 class Solution(object):
     phoneKey = {
@@ -26,7 +24,7 @@ class Solution(object):
             if len(result) == 0:
                 result = self.phoneKey[int(digits[index])]
             else:
-                result = list(itertools.product(result, self.phoneKey[int(digits[index])]))
+                result = [(x, y) for x in result for y in self.phoneKey[int(digits[index])]]
                 result = [''.join(prod) for prod in result]
                 pass
             pass
